@@ -1,0 +1,41 @@
+<h1 class="text-2xl font-bold mb-6">Product Edit</h1>
+<form [formGroup]="userForm" (submit)="onHandleEdit()">
+    <div class="mb-4">
+        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+        <input id="name" formControlName="name" type="text" name="name" placeholder="Enter product name"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+        <div *ngIf="isFormSubmitted && userForm.controls['name'].invalid">
+            <span class="text-red-600" *ngIf="userForm.controls['name'].errors?.['required']">This Is Required</span>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="img" class="block text-sm font-medium text-gray-700">Image URL</label>
+        <input id="img" formControlName="image" type="text" name="image" placeholder="Enter image URL"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+        <div *ngIf="isFormSubmitted && userForm.controls['image'].invalid" >
+            <span class="text-red-600" *ngIf="userForm.controls['image'].errors?.['required']" >This is required</span>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+        <input id="price" formControlName="price" type="text" name="price" placeholder="Enter price"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+        <div *ngIf="isFormSubmitted && userForm.controls['image'].invalid" >
+            <span *ngIf="userForm.controls['price'].errors?.['required']" class="text-red-600">This is required</span>
+            <span *ngIf="userForm.controls['price'].errors?.['min']" class="text-red-600">Min 0</span>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="desc" class="block text-sm font-medium text-gray-700">Description</label>
+        <textarea id="desc" formControlName="description" name="description" rows="4" placeholder="Enter product description"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+        <div *ngIf="isFormSubmitted && userForm.controls['image'].invalid" >
+            <span *ngIf="userForm.controls['description'].errors?.['required']" class="text-red-600">This is required</span>
+            <span *ngIf="userForm.controls['description'].errors?.['minlength']" class="text-red-600">Min length 5</span>
+        </div>
+    </div>
+    <div>
+        <button type="submit"
+            class="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Submit</button>
+    </div>
+</form>

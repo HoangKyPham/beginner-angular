@@ -1,0 +1,83 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Product 1",
+      "image": "https://picsum.photos/200/300",
+      "price": 100,
+      "description": "This is a description of Product 1."
+    },
+    {
+      "id": "2",
+      "name": "Product 2",
+      "image": "https://picsum.photos/200/300",
+      "price": 200,
+      "description": "This is a description of Product 2."
+    },
+    {
+      "id": "3",
+      "name": "Product 3",
+      "image": "https://picsum.photos/200/300",
+      "price": 300,
+      "description": "This is a description of Product 3."
+    },
+    {
+      "name": "Product 4 updated 2",
+      "image": "https://picsum.photos/200/300",
+      "price": 400,
+      "description": "This is a description of Product 4.",
+      "id": "4"
+    },
+    {
+      "name": "san pham 113",
+      "image": "https://picsum.photos/200/300",
+      "price": "1000",
+      "description": "ssasss",
+      "id": "617f"
+    },
+    {
+      "id": "5835",
+      "name": "san pham 33",
+      "image": "https://picsum.photos/200/300",
+      "price": "0",
+      "description": "sâsss"
+    },
+    {
+      "id": "65de",
+      "name": "sasa",
+      "image": "https://picsum.photos/200/300",
+      "price": 222,
+      "description": "sassssa"
+    },
+    {
+      "id": "ee4e",
+      "name": "hoang ky pham",
+      "image": "https://picsum.photos/200/300",
+      "price": 1000,
+      "description": "sâsss"
+    },
+    {
+      "id": "7171",
+      "name": "san pham 99",
+      "image": "https://picsum.photos/200/300",
+      "price": 555,
+      "description": "sjiashka"
+    }
+  ],
+  "users": [
+    {
+      "id": "863f",
+      "name": "ryan",
+      "email": "ryan@gmail.com",
+      "password": "123456",
+      "role": 1
+    },
+    {
+      "id": "0123",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "123456",
+      "role": 2
+    }
+  ]
+}

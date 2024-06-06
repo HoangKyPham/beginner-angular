@@ -1,0 +1,33 @@
+<h1 class="text-2xl font-bold mb-6">Register</h1>
+<form [formGroup]="userForm" (submit)="onHandleRegister()">
+    <div class="mb-4">
+        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+        <input id="name" type="text" name="name" placeholder="Enter your name" formControlName="name"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+        <div *ngIf="isFormSubmitted && userForm.controls['name'].invalid">
+            <span class="text-red-600" *ngIf="userForm.controls['name'].errors?.['required']">This field is required</span>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input id="email" type="email" name="email" placeholder="Enter your email" formControlName="email"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+        <div *ngIf="isFormSubmitted && userForm.controls['email'].invalid">
+            <span class="text-red-600" *ngIf="userForm.controls['email'].errors?.['required']">This field is required</span>
+            <span class="text-red-600" *ngIf="userForm.controls['email'].errors?.['email']">Invalid email format</span>
+        </div>
+    </div>
+    <div class="mb-4">
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input id="password" type="password" name="password" placeholder="Enter your password" formControlName="password"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+        <div *ngIf="isFormSubmitted && userForm.controls['password'].invalid">
+            <span class="text-red-600" *ngIf="userForm.controls['password'].errors?.['required']">This field is required</span>
+            <span class="text-red-600" *ngIf="userForm.controls['password'].errors?.['minlength']">Password must be at least 6 characters</span>
+        </div>
+    </div>
+    <div>
+        <button type="submit"
+            class="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Submit</button>
+    </div>
+</form>
